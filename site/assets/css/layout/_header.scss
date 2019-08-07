@@ -1,0 +1,18 @@
+.header {
+  background-color: #648cff;
+
+  @media only screen and (max-width: 768px) {
+      padding-top: 50px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+  }
+}

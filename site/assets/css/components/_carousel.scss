@@ -1,0 +1,95 @@
+.carousel {
+     position: relative;
+     display: block;
+
+     &__arrow {
+          display: flex;
+     }
+
+     &__img {
+          width: 395px;
+          height: 641px;
+
+          @media only screen and (max-width: 768px) {
+               width: 100px;
+               margin-left: 35px;
+               height: 200px;
+          }
+     }
+
+     &__content {
+          position: relative;
+          float: left;
+     }
+
+     &__item {
+          width: 370px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-left: -185px;
+          z-index: 1;
+          transition: all 0.5s;
+
+          &--left {
+               transform: scale(.9) translateX(-200px);
+
+               @media only screen and (max-width: 768px) {
+                    transform: scale(.9) translateX(-170px);
+               }
+          }
+
+          &--front {
+               position: relative;
+               z-index: 2;
+          }
+
+          &--right {
+               transform: scale(.9) translateX(230px);
+
+               @media only screen and (max-width: 768px) {
+                    transform: scale(.9) translateX(100px);
+               }
+
+          }
+
+
+          &.push-right {
+               z-index: 0;
+               left: 70%;
+               transform: scale(0.9);
+          }
+
+          &.get-center {
+               left: 32%;
+               transform: scale(1) translateX(230px)
+          }
+
+          &.push-left {
+               left: 34%;
+               z-index: 0;
+               transform: scale(0.9);
+          }
+     }
+
+     &__btn {
+          position: absolute;
+          top: 50%;
+          z-index: 2;
+          margin-top: -67px;
+          background-color: transparent;
+          border: none;
+
+          &--left {
+               left: 0;
+          }
+
+          &--right {
+               right: 0;
+          }
+
+          &:focus {
+               outline: none;
+          }
+     }
+}
